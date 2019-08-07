@@ -1,0 +1,4 @@
+sudo pacman -S vim ranger w3m flameshot cmatrix asciiquarium okular redshift zathura tldt fish \
+mps-youtube moc mpv
+
+yay -S ptpython zathura caffeine mu-editor curseradio tmatrix
