@@ -183,9 +183,12 @@ bindsym $mod+p exec i3lock-fancy
 ###############################################################################
 # WallPaper                                                     ###############
 # #############################################################################
+#
+# feh –bg-fill ~/Pictures/Wallpaper_best/Best-Dark-Wallpaper-HD-035.jpg 
+
+# feh --randomize --bg-fill ~/Pictures/*
 
 
-exe --no-startup-id nitrogen
 
 
 ###############################################################################
