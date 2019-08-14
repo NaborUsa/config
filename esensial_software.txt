@@ -3,4 +3,6 @@ mps-youtube moc mpv
 
 yay -S ptpython zathura caffeine mu-editor curseradio tmatrix
 
-Audio
+ffmpeg (audio converter)
+
+
