@@ -8,8 +8,14 @@ case $- in
       *) return;;
 esac
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:~/.local/bin:/snap/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin
 
+echo "[bropages bro]" "[cheat]" "[tldr]" "[man]"
+echo "[asciiquarium]" "[cmatrix]"
+echo "[mpsyt]" "[curseradio]" "[mocp]" "[mpv]"
+echo "[bpython]" "[ptpyton]" "[ipython]" "[pudb]" "[python-gdbgui]"
+echo "[browsh]" "[ranger]" "[flameshot]"
+echo "[cgdb]" "[gdb]" "[ddd]" "[fish]" "[gede]" "[kdbg]"
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -84,7 +90,7 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\033[0;31m\]\342\224\214\342\224\200\$([[ \$? != 0 ]] && echo \"[\[\033[0;31m\]\342\234\227\[\033[0;37m\]]\342\224\200\")[$(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]root\[\033[01;33m\]@\[\033[01;96m\]\h'; else echo '\[\033[0;39m\]\u\[\033[01;33m\]@\[\033[01;96m\]\h'; fi)\[\033[0;31m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;31m\]]\n\[\033[0;31m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]\[\e[01;33m\]\\$\[\e[0m\]"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]\[\033[0;31m\]\342\224\214\342\224\200\$([[ \$? != 0 ]] && echo \"[\[\033[0;31m\]\342\234\227\[\033[0;37m\]]\342\224\200\")[$(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]root\[\033[01;33m\]@\[\033[01;96m\]\h'; else echo '\[\033[0;39m\]\u\[\033[01;33m\]@\[\033[01;96m\]\h'; fi)\[\033[0;31m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;31m\]]\n\[\033[0;31m\]\342\224\224\342\224\200\342\224\200\342\225\274 \[\033[0m\]\[\e[01;33m\]\\$\[\e[0m\]"
     ;;
 *)
     ;;
@@ -100,16 +106,22 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+    alias l='ls -CF'
+    alias la='ls -lha'
+    alias ll='ls -lh'
+    alias lll='ls -alt'
+    alias lllo='ls -altrh'
+    alias mm='tldr'
+
 fi
 
 # some more ls aliases
-alias ll='ls -lh'
-alias la='ls -lha'
+alias ll='ls -l'
+alias la='ls -A'
 alias l='ls -CF'
 alias em='emacs -nw'
 alias dd='dd status=progress'
 alias _='sudo'
-alias _i='sudo -i'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -130,3 +142,21 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+
+VISUAL=vim; export VISUAL EDITOR=vim; export EDITOR
+
+
+# ALIAS
+alias mm=tldr
+alias lll="ls -alt"
+
+# *******************************************************
+# Make python 3 default                               ***
+alias python=python3                       #          ***
+# *******************************************************
+# VISUAL=vim; export VISUAL EDITOR=vim; export EDITOR # ***
+# export VISUAL=vim
+# export EDITOR=vim
+# export EDITOR="$VISUAL"
+# *******************************************************
