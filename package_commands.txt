@@ -1,0 +1,141 @@
+apt-cache search string # Search for string
+
+apt-cache show package
+
+
+apt-get install [-y] package  # Install package
+
+apt-get remove package  # Remove package, leaving configuration
+
+apt-get purge package  # Remove package, deleting configuration
+
+dpkg -l  # List installed packages
+
+dpkg -S /path/to/file  # List file's package
+
+dpkg -L package  # List all files in package
+
+dpkg -i package.deb  # Install package
+
+
+
+
+
+
+
+
+rpm yum dnf
+
+
+yum search string   # Search for string
+
+[package]           # Display info
+
+yum install [-y] package  # Install package
+
+yum remove package  # Remove package
+
+rpm -qa  # List all installed packages
+apt-cache search string  # Search for string
+
+rpm -qf /path/to/file  # List the file's package
+
+rpm -ql package  # List package'files
+
+rpm -ivh package.rpm  # Install package
+
+rpm -e package  # Erase(uninstall)package
+
+# dnf search audacity 
+# dnf install audacity 
+# dnf remove audacity 
+
+How to Install RPM Packages Using YUM
+To install an RPM package simply enter the following command:
+
+
+yum install nameofpackage
+For example:
+
+yum install scribus
+How to Update Packages Using YUM
+If you want to update all the packages on your system simply run the following command:
+
+yum update
+To update a specific package or packages try the following:
+
+yum update nameofpackage
+If you want to update a package to a specific version number you need to use the update-to command as follows:
+
+
+yum update-to nameofpackage versionnumber
+For example:
+
+yum update-to flash-plugin 11.2.202-540-release
+Now think about this situation. You have version 1.0 of a program and there are a number of bug fixes 1.1, 1.2, 1.3 etc. Also available is version 2 of the software. Now imagine you want to install the bug fixes but not move to the new version because quite frankly it sucks. So how do you update without upgrading?
+
+Simply use the update-minimal command as follows:
+
+yum update-minimal programname --bugfix
+
+How to Check for Updates Using YUM Without Installing Them
+Sometimes you want to know what needs updating before actually performing the update.
+
+The following command will return a list of programs that need updating:
+
+yum check-updates
+How to Remove Programs Using YUM
+If you want to remove an application from your Linux system then you can use the following command:
+
+yum remove programname
+
+Removing programs from your system might seem straightforward but by removing one application you may prevent another one from working.
+
+For instance, imagine you had a program that monitors a folder and if it finds a file the program sends you an email letting you know there is a new file. Imagine that this program requires an email service to actually send the email. If you delete the email service the program that monitors the folder will be rendered useless.
+
+To remove programs that are dependent upon the program you are removing using the following command:
+
+yum autoremove programname
+In the instance of the monitoring program and the email service, both applications would be removed.
+
+The auto remove command can also be used without any parameters, as follows:
+
+yum autoremove
+
+This searches your system for files that weren't explicitly installed by you and which have no dependencies. These are known as leaf packages.
+
+List All the RPM Packages Available Using YUM
+You can list all of the available packages within YUM simply by using the following command:
+
+yum list
+There are extra parameters that you can add to the list to make it more useful.
+
+For instance to list all the available updates on your system run the following command:
+
+yum list updates
+To see all the packages that are installed, on your system run the following command:
+
+yum list installed
+You can list all of the files that were installed without the use of repositories by running the following command:
+
+yum list extras
+How to Search for RPM Packages Using YUM
+To search for a specific package use the following command:
+
+yum search programname|description
+For instance to search for Steam use the following command:
+
+yum search steam
+Alternatively, search for a particular type of application as follows:
+
+yum search "screen capture"
+By default the search facility looks in the package names and summaries and only if it doesn't find results will it search descriptions and URLs.
+
+To get yum to search descriptions and URLs as well use the following command:
+
+yum search "screen capture" all
+How to Get Information About RPM Packages Using YUM
+You can retrieve important information about a package by using the following command:
+
+yum info packagename
+
