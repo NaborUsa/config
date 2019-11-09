@@ -1,8 +1,20 @@
 sudo pacman -S vim ranger w3m flameshot cmatrix asciiquarium okular redshift zathura tldt fish \
-mps-youtube moc mpv
+mps-youtube moc mpv deepin-terminal compton dmenu fish i3 
+okular redshift tldr tree zathura rofi calcurse feh nitrogen
+pdftotext
 
-yay -S ptpython zathura caffeine mu-editor curseradio tmatrix
+anaconda bash-completion calcurse calibre deepin-terminal dmenu compton
+geany ghostwriter klavaro osmo rofi  python-pudb  
+tree fd
+yay -S ptpython zathura caffeine-ng mu-editor curseradio-git tmatrix zathura
 
-ffmpeg (audio converter)
+
+ffmpeg (audio converter) 
+st
+
+
+virtualbox
+virtualbox-ext-oracle
+virtualbox-guest-iso
 
 
