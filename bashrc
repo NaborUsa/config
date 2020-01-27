@@ -10,12 +10,18 @@ esac
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin
 
-echo "[bropages bro]" "[cheat]" "[tldr]" "[man]"
-echo "[asciiquarium]" "[cmatrix]"
-echo "[mpsyt]" "[curseradio]" "[mocp]" "[mpv]"
-echo "[bpython]" "[ptpyton]" "[ipython]" "[pudb]" "[python-gdbgui]"
-echo "[browsh]" "[ranger]" "[flameshot]"
-echo "[cgdb]" "[gdb]" "[ddd]" "[fish]" "[gede]" "[kdbg]"
+# screenfetch
+
+# echo "[bropages bro]" "[cheat]" "[tldr:]" "[man]" "curl cheat.sh/ruby/write"
+echo "[tldr:mm]" "[man]" "curl cheat.sh/ruby/write" "alias"
+# echo "[asciiquarium]" "[cmatrix]"
+echo "[mpsyt:m+c+y]" "[curseradio:m+c+c]" "[mocp:m+c+m]" "[cmus]" "[mpv]"
+echo "[bpython]" "[ptpyton]" "[ipython]" "[pudb:python -m pudb.run a.py]" 
+echo "[ranger]" "[flameshot:m+c+f]" "[anaconda-navigator:an]" "[spyder]"
+echo "[caffeine-ind:m+c+k]" 
+# echo "[cgdb]" "[gdb]" "[ddd]" "[fish]" "[gede]" "[kdbg]" "[python-gdbgui]"
+echo ["st copy alt-c, paste shift-insert"]
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -112,16 +118,21 @@ if [ -x /usr/bin/dircolors ]; then
     alias lll='ls -alt'
     alias lllo='ls -altrh'
     alias mm='tldr'
+    alias pp='poweroff'
+    alias an='anaconda-navigator'
 
 fi
 
 # some more ls aliases
-alias ll='ls -l'
+alias ll='ls -lh'
 alias la='ls -A'
 alias l='ls -CF'
 alias em='emacs -nw'
 alias dd='dd status=progress'
 alias _='sudo'
+alias pp='poweroff'
+alias t='turtle'
+alias an='anaconda-navigator'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -160,3 +171,19 @@ alias python=python3                       #          ***
 # export EDITOR=vim
 # export EDITOR="$VISUAL"
 # *******************************************************
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/nabor/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/nabor/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/nabor/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/nabor/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
