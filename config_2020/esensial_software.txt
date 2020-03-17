@@ -1,0 +1,60 @@
+sudo pacman -S vim ranger w3m flameshot  okular redshift zathura \
+ mpv deepin-terminal compton dmenu i3 \
+ tldr tree rofi  feh nitrogen k3b handbrake \
+ fd meld geany vlc audacity \
+fish mps-youtube moc cmus python-pudb osmo
+  
+calcurse feh
+i3 rofi klavaro
+anaconda bash-completion calcurse calibre deepin-terminal dmenu compton
+geany ghostwriter klavaro  rofi    
+tree fd
+yay -S ptpython zathura caffeine-ng mu-editor curseradio-git tmatrix pdftotext
+yay -S freeoffice wps-office
+yay no e
+
+yay ccat
+ffmpeg (audio converter) 
+st
+
+
+virtualbox
+virtualbox-ext-oracle (yay)
+virtualbox-guest-iso
+
+keepass
+
+vlc
+htop
+timeshift octopi
+pycrust catfish
+caffene-ng
+audacity bash note pads
+gdb firefox
+ccat handbrake
+k3b
+kblocks
+calcurse
+thunderbirdcmatrix asciiquarium
+
+
+rtv
+scratch rofi
+sm tube
+thony
+tmux
+
+for Devian-ubunto
+
+sudo apt-get install ranger okular mpv redshift xfce4-terminal tree
+sudo apt-get install nitrogen i3 dmenu compton rofi zathura
+sudo apt-get install geany python-pudb bpython3
+sudo apt-get install vlc meld pycrust spyder3 caffeine writetype klavaro focuswriter
+sudo apt-get install htop moc cmus
+https://computingforgeeks.com/install-flameshot-screenshot-software-on-linux/
+E-Book viewer
+calibre
+osmo
+homebank
+gnucash
+E-book reader

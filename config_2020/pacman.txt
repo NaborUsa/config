@@ -1,0 +1,18 @@
+pacman -S < > # download the progran
+pacman -Ss < > # search for the program
+pacman -Syu  # update prograns and mirrors now aur
+pacman -Syyuw # download the program
+yay -Syu  # update all programs
+
+pacman -R # remove
+pacman -Rs # remove with dependencies
+pacman -Rns # remove everything even config files
+
+pacman -Q # print every packege that is install locale
+pacman -Qe  # print all explecite install programs
+pacman -Qeq # don't show the version
+pacman -Qn # print programs install from the main repository
+pacman -Qm # print prograns install from aur
+pacman -Qdt # 
+pacman -Qs # <emacs> search in locale repository
+pacman -Q | wc -l

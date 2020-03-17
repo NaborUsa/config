@@ -1,0 +1,43 @@
+" A couple of nice colorschemes
+" Plug 'fisadev/fisa-vim-colorscheme'
+Plug 'patstockwell/vim-monokai-tasty'
+
+" Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Pending tasks list
+Plug 'fisadev/FixedTaskList.vim'
+
+" Python autocompletion
+Plug 'deoplete-plugins/deoplete-jedi'
+" Completion from other opened files
+Plug 'Shougo/context_filetype.vim'
+
+" Just to add the python go-to-definition and similar features, autocompletion
+" from this plugin is disabled
+Plug 'davidhalter/jedi-vim'
+
+" Automatically sort python imports
+Plug 'fisadev/vim-isort'
+
+" Tasklist ------------------------------
+
+" show pending tasks list
+map <F2> :TaskList<CR>
+
+
+" Jedi-vim ------------------------------
+
+" Disable autocompletion (using deoplete instead)
+let g:jedi#completions_enabled = 0
+
+" All these mappings work only for python code:
+" Go to definition
+let g:jedi#goto_command = ',d'
+" Find ocurrences
+let g:jedi#usages_command = ',o'
+" Find assignments
+let g:jedi#goto_assignments_command = ',a'
+" Go to definition in new tab
+nmap ,D :tab split<CR>:call jedi#goto()<CR>
