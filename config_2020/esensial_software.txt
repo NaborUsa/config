@@ -1,19 +1,27 @@
-sudo pacman -S vim ranger w3m flameshot  okular redshift zathura \
- mpv deepin-terminal compton dmenu i3 \
- tldr tree rofi  feh nitrogen k3b handbrake \
- fd meld geany vlc audacity \
-fish mps-youtube moc cmus python-pudb osmo
+sudo pacman -S vim ranger w3m flameshot  okular redshift \ 
+zathura mpv deepin-terminal xfce4-terminal compton dmenu i3\
+tldr tree rofi nitrogen k3b handbrake fd meld geany vlc moc \
+calcurse rtv htop dwm
+
+yay zathura caffeine-ngn curseradio-git ccat
+
+audacity
+fish 
+mps-youtube  
+cmus 
+python-pudb 
+osmo
   
-calcurse feh
-i3 rofi klavaro
-anaconda bash-completion calcurse calibre deepin-terminal dmenu compton
-geany ghostwriter klavaro  rofi    
-tree fd
-yay -S ptpython zathura caffeine-ng mu-editor curseradio-git tmatrix pdftotext
+ feh
+ klavaro
+anaconda bash-completion  calibre
+ghostwriter    
+
+yay -S ptpython zathura caffeine-ng mu-editor  tmatrix pdftotext
 yay -S freeoffice wps-office
 yay no e
 
-yay ccat
+yay 
 ffmpeg (audio converter) 
 st
 
@@ -25,20 +33,21 @@ virtualbox-guest-iso
 keepass
 
 vlc
-htop
+clipgrab
+
 timeshift octopi
 pycrust catfish
-caffene-ng
+
 audacity bash note pads
 gdb firefox
-ccat handbrake
+
 k3b
 kblocks
-calcurse
-thunderbirdcmatrix asciiquarium
+
+thunderbird cmatrix asciiquarium
 
 
-rtv
+
 scratch rofi
 sm tube
 thony
@@ -58,3 +67,88 @@ osmo
 homebank
 gnucash
 E-book reader
+
+
+Provando
+recordmydesktop
+kazam
+vodoscreen
+simplescreenrecorder
+
+
+CLI SOFTWARE
+
+mtr  is better than traceroute combines the functionality of
+     traceroute and ping into one tool.
+
+asciiquarium
+screenfetch
+
+no-more-secrets  sneakers
+
+edex-ui
+
+hollywood
+pandoc
+vitetris
+tint
+FFmpeg
+HandBrakeCLI
+youtube-dl
+wego
+
+
+NETWORKING
+bandwidth monitor NG
+blucat
+gping  -- ping
+iftop  - display bandwidth usage on an interfacej
+localtunnel - Exposes your localhost to the world for easy testing and sharing
+Netcat - networking utility which reads and writes data across
+         network connections, using the TCP/IP protocol.
+Nethogs -- Linux "net top" tool.
+ngrep - grep as a network packet analyzer
+nmap - network discovery and security auditing utility
+vnStat - console-based network traffic monitor for Linux and BSD that
+         keeps a log of network traffic for the selected interface(s)
+
+nmap  * umit a powerfull nmap frontend
+      * vulscan a module which enhances nmap to a vulnerability scanner
+
+pdfgrep - command line utility to search text in PDF files.
+
+newsbeuter - the Mutt of RSS feed readers
+
+aircrack-ng
+
+the_silver_searcher  -- similar to Ack but faster
+ripgrep -- recursively search directories for a regex pattern extremely fast
+
+dstat -versatile replacement for vmstat, iostat, netstat and ifstat
+
+iotop - find out what' strssing and increasing load on your hard disks.
+
+bat 'cat' clone with syntax highlighting and git integration
+look very good
+
+bgrep - like grep but for binary strings
+
+fzf - A general purpose fuzzy finder
+
+cheat create and view interactive cheatsheets
+https://github.com/cheat/cheat
+
+sd - intuitive find-and-replace alternative to 'sed'
+https://github.com/chmln/sd
+
+googler - google search, google site search, google news from the terminal
+ddgr 
+https://github.com/jarun/ddgr
+
+maestral - a light weight and open source dropbox client
+https://github.com/SamSchott/maestral
+
+
+download
+ipcalc
+sipcalc
