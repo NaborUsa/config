@@ -8,7 +8,6 @@ set list
 
 syntax enable
 filetype plugin on 
-set ruler
 set laststatus=2
 
 set number
@@ -106,7 +105,7 @@ autocmd FileType python nnoremap <buffer> <F5> :exec'!clear; python'shellescape(
 :iabbrev main # Call the main Function<return>if __name__ == "__main__":<return>main()
 inoremap <localleader>i int(input(''))<esc>hhha
 inoremap <localleader>f float(input(''))<esc>hhha
-inoremap <localleader>; print('')<esc>hha
+inoremap <localleader>p print('')<esc>hha
 
 " Bash
 :iabbrev #! #!/bin/bash<return><return>
@@ -131,22 +130,13 @@ call plug#begin()
 " Colors
 Plug 'sjl/badwolf'
 Plug 'paulgeringer/vim-tomorrow-night-theme'
-"
-" Plug 'w0ng/vim-hybrid'
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'kiddos/malokai.vim'
 Plug 'erichdongubler/vim-sublime-monokai'
 Plug 'haishanh/night-owl.vim'
-" Plug 'chriskempson/base16-vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'joshdick/onedark.vim'
 
-
-Plug 'mattn/calendar.vim'
-
-
-" Plug 'klen/python-mode'
-" Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-commentary'
 " Plug 'tpope/vim-repeat'
@@ -156,28 +146,27 @@ Plug 'tpope/vim-commentary'
 
 "vimwiki start
 Plug 'vimwiki/vimwiki'
-" Plug 'itchyny/calendar.vim'
+" Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 Plug 'francoiscabrol/ranger.vim'
 " (https://vimawesome.com/plugin/ranger-vim-sad-beautiful-tragiclug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " https://vimawesome.com/plugin/vim-airline-themes
 
-""Plug 'valloric/youcompleteme'
-"Plug 'vim-scripts/pythoncomplete'
-
-"Plug 'mattn/emmet-vim'
 
 
-" Future plug ins ?????
+
 "Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'davidhalter/jedi-vim'
 " Plug 'scrooloose/syntastic'
 " https://vimawesome.com/plugin/syntastic
+"Plug 'mattn/emmet-vim'
+"Plug 'valloric/youcompleteme'
+"Plug 'vim-scripts/pythoncomplete'
 
 
-"Plug 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 " Plug 'valloric/vim-indent-guides'
 "Plug 'tomtom/tcomment_vim
 "Plug 'vim-scripts/pythoncomplete'
@@ -328,7 +317,10 @@ autocmd filetype java nnoremap <F7> :w <bar> exec '!javac '.shellescape('%').' &
 " Run multiple wikis "
 let g:vimwiki_list = [
                         \{'path': '~/Documents/VimWiki/personal.wiki'},
-                        \{'path': '~/Documents/VimWiki/tech.wiki'}
+                        \{'path': '~/Documents/VimWiki/tech.wiki'},
+                        \{'path': '~/Documents/VimWiki/salud.wiki'},
+                        \{'path': '~/Documents/VimWiki/python.wiki'},
+                        \{'path': '~/Documents/VimWiki/haking.wiki'}
                 \]
 au BufRead,BufNewFile *.wiki set filetype=vimwiki
 :autocmd FileType vimwiki map d :VimwikiMakeDiaryNote
