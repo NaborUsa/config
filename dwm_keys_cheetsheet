@@ -1,0 +1,284 @@
+Nabor'Dwm
+
+static const Layout layouts[] = {
+	/* symbol     arrange function */
+	{ "[]=",      tile },    /* first entry is default */
+	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "[M]",      monocle },
+	{ "TTT",      bstack },
+	{ "===",      bstackhoriz },
+    { "[D]",      deck },
+};
+
+
+
+MODKEY|ShiftMask,             XK_p,      spawn,          dmenu
+MODKEY,                       XK_p,      spawn,          rofi
+MODKEY,                       XK_grave,  togglescratch,  scratchpadcmd
+
+MODKEY|ShiftMask,             XK_o,      spawn,          okular
+MODKEY|ShiftMask,             XK_m,      spawn,          mocpcmd
+MODKEY|ShiftMask,             XK_v,      spawn,          vimcmd
+MODKEY|ShiftMask,             XK_b,      spawn,          bpythoncmd
+
+MODKEY|ShiftMask,             XK_f,      spawn,          firefox-developer-edition
+MODKEY|ShiftMask,             XK_g,      spawn,          google-chrome
+MODKEY|ShiftMask,             XK_k,      spawn,          qutebrowsercmd
+
+MODKEY,                       XK_n,      spawn,          pcmanfm
+MODKEY|ShiftMask,             XK_Return, spawn,          termcmd # st
+MODKEY|ControlMask,           XK_Return, spawn,          term1cmd # urxvt
+
+
+Original or Patch
+
+MODKEY,                XK_b,      togglebar,      Hide the bar if it is shown, show the bar if it is hidden
+
+MODKEY,                XK_j,      focusstack,     {.i = +1 } },
+MODKEY,                XK_k,      focusstack,     {.i = -1 } },
+
+MODKEY,                XK_i,      incnmaster,     {.i = +1 } },
+MODKEY,                XK_d,      incnmaster,     {.i = -1 } },
+
+MODKEY,                XK_h,      setmfact,       {.f = -0.05} },# resize
+MODKEY,                XK_l,      setmfact,       {.f = +0.05} },# resize
+
+MODKEY,                XK_Return, zoom,           {0} }, toggle a window between the master and stack area
+MODKEY,                XK_Tab,    view,           {0} },# togle present to before""
+MODKEY|ShiftMask       XK_c,      killclient,     {0} },
+
+MODKEY,                XK_t,            layouts[0],"[]=", tile  /* first entry is default */
+MODKEY,                XK_f,            layouts[1],"><>", NULL },    /* no layout 
+                                         function means floating behavior */
+MODKEY,                XK_m,            layouts[2],"[M]", monocle },
+MODKEY,                XK_u,            layouts[3],"TTT", bstack },
+MODKEY,                XK_o,            layouts[4],"===", bstackhoriz },
+MODKEY,                XK_c,            layouts[5],"[D]", deck },
+
+
+  
+MODKEY,                XK_space,  setlayout,      {0} },
+MODKEY|ShiftMask       XK_space,  togglefloating, {0} },
+MODKEY,                XK_0,      view,           {.ui = ~0 } },
+MODKEY|ShiftMask       XK_0,      tag,            {.ui = ~0 } },
+MODKEY,                XK_comma,  focusmon,       {.i = -1 } },
+MODKEY,                XK_period, focusmon,       {.i = +1 } },
+MODKEY|ShiftMask       XK_comma,  tagmon,         {.i = -1 } },
+MODKEY|ShiftMask       XK_period, tagmon,         {.i = +1 } },
+
+MODKEY|ControlMask     XK_n,      shiftview,      {.i = +1 } },
+MODKEY|ControlMask     XK_b,      shiftview,      {.i = -1 } },
+
+
+TAGKEYS(               XK_1,                      0)
+TAGKEYS(               XK_2,                      1)
+TAGKEYS(               XK_3,                      2)
+TAGKEYS(               XK_4,                      3)
+TAGKEYS(               XK_5,                      4)
+TAGKEYS(               XK_6,                      5)
+TAGKEYS(               XK_7,                      6)
+TAGKEYS(               XK_8,                      7)
+TAGKEYS(               XK_9,                      8)
+
+MODKEY|ShiftMask,      XK_q,      quit,           {0} },
+
+
+
+
+
+
+
+
+
+
+#################################################
+################################################
+
+
+https://christine.website/blog/why-i-use-suckless-tools-2020-06-05
+
+
+Command	           Effect
+Alt-p	           Spawn a program by name
+Alt-Shift-Enter	   Open a new terminal window
+Alt-b	           Hide the bar if it is shown, show the bar if it is hidden
+Alt-j	           Move focus down the stack of windows
+Alt-k   	       Move focus up the stack of windows
+Alt-i	           Increase the number of windows in the primary area
+Alt-d	           Decrease the number of windows in the primary area
+Alt-h	           Make the primary area smaller by 5%
+Alt-l	           Make the primary area larger by 5%
+Alt-Enter	       Move the currently active window into the primary area
+Alt-Tab	           Switch to the most recently active workspace
+Alt-Shift-C	       Nicely ask a window to close
+Alt-t	           Select normal tiling mode for the current workspace
+Alt-f	           Select floating (non-tiling) mode for the current workspace
+Alt-m	           Select monocle (fullscreen active window) mode for the current workspace
+Alt-u	           Select bottom-stacked tiling mode for the current workspace
+Alt-o	           Select bottom-stacked horizontal tiling mode for the current workspace 
+(useful on vertical monitors)
+Alt-e	           Open a new emacs window
+Alt-Space	                    Switch to the most recently used tiling method
+Alt-Shift-Space	                Detach the currently active window from tiling
+Alt-1 thru Alt-9                Switch to a given workspace
+Alt-Shift-1 thru Alt-Shift-9	Move the active window to a given workspace
+Alt-0	                        Show all windows on all workspaces
+Alt-Shift-0	                    Show the active window on all workspaces
+Alt-Comma and Alt-Period	            Move focus to the other monitor
+Alt-Shift-Comma and Alt-Shift-Period	Move the active window to the other monitor
+Alt-Shift-q	                            Uncleanly exit dwm and kill the session
+
+
+############################################################
+
+
+
+https://dwm.suckless.org/tutorial/
+
+[Shift]+[Mod]+[Enter] - launch terminal
+[Mod]+[p] - dmenu for running programs like the x-www-browser
+
+
+
+Launch a few terminals with [Shift]+[Alt]+[Enter] and 
+dwm will tile the windows between the master and stack. 
+A new terminal appears on the master window. 
+Existing windows are pushed upon a stack to the right of the screen. 
+[Alt]+[Enter] toggles windows between master and stack.
+
+     +------+----------------------------------+--------+
+     | tags | title                            | status +
+     +------+---------------------+------------+--------+
+     |                            |                     |
+     |                            |                     |
+     |                            |                     |
+     |                            |                     |
+     |          master            |        stack        |
+     |                            |                     |
+     |                            |                     |
+     |                            |                     |
+     |                            |                     |
+     +----------------------------+---------------------+
+
+
+
+Moving Around
+To move to another terminal, press [Alt]+[j] or [Alt]+[k].
+
+To move a terminal to another tag, hover to the terminal and press 
+[Shift]+[Alt]+[2]. Note! If you are a frequent user of the text 
+editor 'nano' the key sequence [Shift]+[Alt]+[4] will stomp on 
+nano's softwrap M-$. To get around this you can unbind nano's M-$ in .nanorc thus:
+
+unbind M-$ all
+and rebind it to a new sequence thus (here bind it to 'Meta Key' + ';'):
+
+  bind M-; softwrap all
+There are several other nano key sequences that dwm will 
+stomp on - use the above example to fix nano up.
+
+To focus on another tag, press [Alt]+[tag number].
+
+To change the amount of windows in the master area, 
+press [Alt]+[d] (Decrease) or [Alt]+[i] (Increase).
+
+To toggle a window between the master and stack area, press [Alt]+[Return]
+
+As stated in the dwm manpage, you can click tags with 
+the left mouse button and simulating [Alt]+[tag number], 
+but you can also click another tag with the right mouse button 
+in order to bring those windows additionally into your current focus.
+
+To kill a window, press [Shift]+[Alt]+[c].
+
+
+
+Layouts
+By default dwm is in tiled layout mode. Ensure it is tiled mode with:
+
+[Alt]+[t]
+You should also notice the []= symbol between the tag numbers and the title bar.
+
+dwm has two further layout modes, floating ><> [Alt]+[f] and monocle [M] [Alt]+[m]. 
+Monocle is good for ensuring a window is kept maximized and focused. 
+This is useful in web kiosk environments and watching flash videos. 
+Further layout modes can be included through patches.
+
+Floating
+Floating layout will be familiar to Windows users. Use [Alt]+[right mouse button] 
+to resize the floating window and [Alt]+[left mouse button] to move it around. 
+This can also be used to raise a floating window.
+
+There are several ways to get specific windows into being managed as a floating window, 
+despite the tiled layout being activated. First there is [Alt]+[Shift]+[space], 
+which will toggle floating mode on the active window. Second method is t
+o simply resize the window using [Alt]+[right mouse button]. The last method 
+is to [Alt]+[middle mouse button] onto the window, to toggle it in being floating. 
+These floating windows then can be used to force certain window sizes, 
+when some application requires this for aesthetics or simply to being usable.
+
+If you want to set some type of window to be always floating, look at the config.def.h 
+and the rules array, where the last but one element defines this behaviour.
+
+Quitting
+To quit dwm cleanly:
+
+[Shift]+[Alt]+[q]
+Status
+By default dwm is showing dwm-X.X in its statusbar. This text can be changed 
+by setting the WM_NAME property of the root window.
+
+Using the tools of X.org, this can be set using:
+
+% xsetroot -name "Some Text"
+There are various tools and methods to populate this text with useful information from your system or 
+services running on your system. A barebone for doing this in C is dwmstatus. See the xinitrc 
+example for how to do it using a script.
+
+######################################################################
+
+https://gist.github.com/erlendaakre/12eb90eef84a3ab81f7b531e516c9594
+
+
+Basic
+=====
+
+[Shift]+[Mod]+[Enter]   - launch terminal.
+
+[Mod]+[b]               - show/hide bar.
+[Mod]+[p]               - dmenu for running programs like the x-www-browser.
+[Mod]+[Enter]           - push acive window from stack to master, or pulls last used window from stack onto master.
+
+[Mod] + [j / k]         - focus on next/previous window in current tag.
+[Mod] + [h / l]         - increases / decreases master size.
+
+Navigation
+==========
+
+[Mod]+[2]               - moves your focus to tag 2.
+[Shift]+[Mod]+[2]       - move active window to the 2 tag.
+
+[Mod] + [i / d]         - increases / decreases number of windows on master
+[Mod] + [, / .]         - move focus between screens (multi monitor setup)
+[Shift]+[Mod]+[, / .]   - move active window to different screen.
+
+[Mod]+[0]               - view all windows on screen.
+[Shift]+[Mod]+[0]       - make focused window appear on all tags.
+[Shift]+[Mod]+[c]       - kill active window.
+[Shift]+[Mod]+[q]       - quit dwm cleanly.
+
+Layout
+======
+
+[Mod]+[t]               - tiled mode. []=
+[Mod]+[f]               - floating mode. ><>
+[Mod]+[m]               - monocle mode. [M] (single window fullscreen)
+
+Floating
+========
+
+[Mod]+[R M B]           - to resize the floating window.
+[Mod]+[L M B]           - to move the floating window around.
+[Mod]+[Space]           - toggles to the previous layout mode.
+[Mod]+[Shift]+[Space]   - to make an individual window float.
+[Mod]+[M M B]           - to make an individual window un-float.
