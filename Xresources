@@ -1,0 +1,31 @@
+! Rofi
+rofi.font: DejaVu Sans Mono 12
+rofi.padding: 20
+rofi.line-padding: 2
+rofi.color-enabled: true
+rofi.hide-scrollbar: true
+rofi.separator-style: solid
+rofi.color-window: #1c2023, #919ba0, #1c2023
+rofi.color-normal: #1c2023, #919ba0, #1c2023, #a4a4a4, #1c2023
+rofi.color-urgent: argb:00000000, #f43753, argb:00000000, argb:00000000, #e29a49
+rofi.color-active: argb:00000000, #49bbfb, argb:00000000, argb:00000000, #e29a49
+
+
+! URxvt
+! xrdb ~/.Xresources
+URxvt.font: xft:DejaVu Sans Mono:size=12
+URxvt.scrollBar: false
+
+
+urxvt*transparent: true
+urxvt*shading: 30
+
+! https://github.com/bookercodes/awesome-urxvt
+! paru -S urxvt-resize-font-git
+! https://github.com/simmel/urxvt-resize-font
+
+xvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-plus:      resize-font:bigger
+URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-question:  resize-font:show
+
