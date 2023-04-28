@@ -1,0 +1,10 @@
+caffeine-ng
+geany-jedi-complete
+google-chrome
+mullvad-browser-bin
+pamac-aur
+redshifter
+sublime-text-4
+youtube-dl-gui
+zoom
+zoom-firefox

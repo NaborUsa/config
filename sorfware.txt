@@ -1,0 +1,38 @@
+bpython
+caffeine-ng
+galculator
+youtube-dl-gui
+thunar
+vim
+geany
+sublime
+flameshot
+okular
+peek
+ristretto
+google chrome
+firefox
+waterfox
+thunderbird
+mullvat browser
+zoom
+audacity
+brasero
+handbrake
+k3b
+mvp 
+vlc
+libreoffice
+pdf arranger
+Xornal++
+rofi
+add remove software
+htop
+
+
+
+
+
+nitrogen
+picon
+redshift
