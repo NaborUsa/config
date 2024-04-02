@@ -9,12 +9,11 @@ sublime
 flameshot
 okular
 peek
-ristretto
+ristretto or nomac
 google chrome
 firefox
 waterfox
 thunderbird
-mullvat browser
 zoom
 audacity
 brasero
@@ -22,14 +21,27 @@ handbrake
 k3b
 mvp 
 vlc
-libreoffice
+libreoffice or onlyoffice
 pdf arranger
-Xornal++
+ghostwriter
 rofi
 add remove software
 htop
+bash-completion
+fzf
+gcc
+gdb
+gtop
+bat
+calcurse
+calibre
+catfish
+hwinfo
+moc
+networkmanager
+python-pudb
 
-
+neofetch
 
 
 
